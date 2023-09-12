@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <div class="container" id="articlesDiv"></div>
+    <div class="container my-3" id="articlesDiv"></div>
     <button id="btn1">Click Me</button>
     <script>
       var url = "https://api.spaceflightnewsapi.net/v3/articles";
@@ -54,6 +54,9 @@
       #articlesDiv {
         columns: 3;
         column-gap: 10px;
+      }
+      .card {
+        break-inside: avoid;
       }
     </style>
   </body>
