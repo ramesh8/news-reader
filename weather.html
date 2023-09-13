@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var apiKey = "9Az76eVpOPToGaA7TBBNEVoj6NVA5UQH"; //caution: should not expose keys
+      var locationID = "261159";
+      //detect user location
+      //pass that location to url2
+
+      var url = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${locationID}?apikey=${apiKey}`;
+      // var url2 = `http://dataservice.accuweather.com/locations/v1/cities/search`;
+
+      fetch(url)
+        .then((res) => res.json())
+        .then((res) => {
+          displayResult(res);
+        });
+
+      function displayResult(res) {
+        //todo: show on web page
+        console.log(res);
+      }
+    </script>
+  </body>
+</html>
